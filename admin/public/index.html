@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+	<head>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<title>Question & Token Admin</title>
+	</head>
+	<body>
+
+		<div class="container" ng-controller="AppCtrl">
+			<h1>
+				Question & Token Admin
+			</h1>
+			<br></br>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Question</th>
+						<th>Token 1 <br> (name: yes, no)</th>
+						<th>Token 2 <br> (name: yes, no)</th>
+						<th>Token 3 <br> (name: yes, no)</th>
+						<th>Token 4 <br> (name: yes, no)</th>
+						<th>Token 5 <br> (name: yes, no)</th>
+						<th>Action</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input class="form-control" ng-model="questionNode.question" placeholder="Question">
+						</td>
+						<td>
+							<input class="form-control" ng-model="questionNode.Tokens.Token1.name" placeholder="Token Name">
+							<input class="form-control" ng-model="questionNode.Tokens.Token1.yes" placeholder="Yes">
+							<input class="form-control" ng-model="questionNode.Tokens.Token1.no" placeholder="No">
+						</td>
+						<td>
+							<input class="form-control" ng-model="questionNode.Tokens.Token2.name" placeholder="Token Name">
+							<input class="form-control" ng-model="questionNode.Tokens.Token2.yes" placeholder="Yes">
+							<input class="form-control" ng-model="questionNode.Tokens.Token2.no" placeholder="No">
+						</td>
+						<td>
+							<input class="form-control" ng-model="questionNode.Tokens.Token3.name" placeholder="Token Name">
+							<input class="form-control" ng-model="questionNode.Tokens.Token3.yes" placeholder="Yes">
+							<input class="form-control" ng-model="questionNode.Tokens.Token3.no" placeholder="No">
+						</td>
+						<td>
+							<input class="form-control" ng-model="questionNode.Tokens.Token4.name" placeholder="Token Name">
+							<input class="form-control" ng-model="questionNode.Tokens.Token4.yes" placeholder="Yes">
+							<input class="form-control" ng-model="questionNode.Tokens.Token4.no" placeholder="No">
+						</td>
+						<td>
+							<input class="form-control" ng-model="questionNode.Tokens.Token5.name" placeholder="Token Name">
+							<input class="form-control" ng-model="questionNode.Tokens.Token5.yes" placeholder="Yes">
+							<input class="form-control" ng-model="questionNode.Tokens.Token5.no" placeholder="No">
+						</td>
+						<td><button class="btn btn-primary" ng-click="addQuestion()">Add Question</button></td>
+						<td><button class="btn btn-info" ng-click="update()">Update</button></td>
+					</tr>
+					<tr ng-repeat="questionNode in questionlist">
+						<td>{{questionNode.question}}</td>
+						<td>{{questionNode.Tokens.Token1.name}}:<br> {{questionNode.Tokens.Token1.yes}}, {{questionNode.Tokens.Token1.no}}</td>
+						<td>{{questionNode.Tokens.Token2.name}}:<br> {{questionNode.Tokens.Token2.yes}}, {{questionNode.Tokens.Token2.no}}</td>
+						<td>{{questionNode.Tokens.Token3.name}}:<br> {{questionNode.Tokens.Token3.yes}}, {{questionNode.Tokens.Token3.no}}</td>
+						<td>{{questionNode.Tokens.Token4.name}}:<br> {{questionNode.Tokens.Token4.yes}}, {{questionNode.Tokens.Token4.no}}</td>
+						<td>{{questionNode.Tokens.Token5.name}}:<br> {{questionNode.Tokens.Token5.yes}}, {{questionNode.Tokens.Token5.no}}</td>
+						<td><button class="btn btn-danger" ng-click="remove(questionNode._id)">Remove</button></td>
+						<td><button class="btn btn-warning" ng-click="edit(questionNode._id)">Edit</button></td>
+					</tr>
+
+					
+				</tbody>
+			</table>
+
+			</table>
+
+
+		</div>
+		<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+		</script>
+		<script src ="controllers/controller.js"></script>
+	</body>
+
+</html>
