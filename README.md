@@ -13,13 +13,13 @@ Here is a [demo video](https://youtu.be/qvVgo2Sz5Z4) and a [setup video](https:/
 3. Launch [http://localhost:3000/](http://localhost:3000/) to view the admin application. ![](images/admin_launch.png)
 4. Open a new terminal window and CD into the mongo/bin folder. Run the mongo shell by typing ```mongo```.
 5. Create a database called questionlist by typing ```use questionlist``` and you should receive the following feedback -- ```switched to db questionlist```. Below is in image of the terminal commands for setting up your database. ![](images/mongodb_launch.png)
-6. Insert dummy data into the database by typing <br> ```
+6. Insert dummy data into the database by copying and pasting the following into the same terminal window <br> ```
 db.questionlist.insert([
 {question: "Should we build more schools?", Tokens: {Token1: {name: "Income Tax", yes: "5", no: "-3"}, Token2: {name: "Education Level", yes: "3", no: "-4"}, Token3: {name: "Public Health", yes: "2", no: "-5"}, Token4: {name: "Entrepreneurship", yes: "3", no: "-1"}, Token5: {name: "Community Arts", yes: "-3", no: "4"}}}, {Tokens: {
 Token1: {name: "Income Tax", yes: "6", no: "0"},Token2: {name: "Education Level",yes: "-2",no: "2"},Token3: {name: "Public Health",yes: "-3",no: "4"}, Token4:{name: "Entrepreneurship",yes: "4",no: "-3"},Token5: {name: "Community Arts",yes: "3",no: "-2"}},
 question: "Should we lower the drinking age?"},{question: "Should we build more parks?",Tokens: {Token1: {name: "Income Tax",yes: "-3",no:"2"},Token2: {name: "Education Level",yes: "4",no: "-2"},Token3: {name: "Public Health",yes: "2",no: "-1"},Token4: {name: "Entrepreneurship",yes: "2",no: "-1"},Token5: {name: "Community Arts",yes: "4",no: "-2"}}},{question: "Should we provide more artist residence programs?",Tokens: {Token1: {name: "Income Tax",yes: "-3",no: "2"},Token2: {name: "Education Level",yes: "5",no: "-4"},Token3: {name: "Public Health",yes: "3",no: "-1"},Token4: {name: "Entrepreneurship",yes: "4",no: "-2"},Token5: {name: "Community Arts",yes: "5",no: "-5"}}},{question: "Should we protect small businesses?",Tokens: {Token1: {name:"IncomeTax",yes:"2",no: "-2"},Token2: {name: "Education Level",yes: "3",no: "-1"},Token3: {name: "Public Health",yes: "2",no: "-1"},Token4: {name:"Entrepreneurship",yes: "5",no: "-3"},Token5: {name: "Community Arts",yes: "2",no: "-1"}}}])```
 
-7. Refresh the page and the table should be filled with the dummy data. ![](images/admin_data.png) Visit [http://localhost:3000/](http://localhost:3000/questionlist).
+7. Refresh the page and the table should be filled with the dummy data. ![](images/admin_data.png) Visit [http://localhost:3000/questionlist](http://localhost:3000/questionlist) to see the data in JSON format.
 
 8. To add, edit, or delete data via the interface:
 	* DELETE: press the remove button
@@ -32,7 +32,7 @@ question: "Should we lower the drinking age?"},{question: "Should we build more 
 Once the database is populated and the server is running, run the openFrameworks app. Note that if the admin app is not running on local server 3000, the OF app will not work. 
 
 1. Drag the rgb\_game\_06\_07 folder into your openFrameworks/app/myApps folder.
-2. Open the application by clicking rgb\_game\_06\_07.xcodeproj
+2. Open the application by clicking rgb\_game\_06\_07.xcodeproj. It will launch in xcode. 
 3. Make sure the active scheme is in debug mode <br> ![](images/of_debug.png)
 4. Press the play button in upper left hand corner, and the application should launch ![](images/of_launch.png)
 5. Press the no or yes button to engage. As you engage, the leaderboard will update. ![](images/of_engage.png)
@@ -57,4 +57,4 @@ Once the database is populated and the server is running, run the openFrameworks
 3. Animations for leaderboard changes.
 4. Add a launch page before going straight to the leaderboard. 
 5. Make sure a question does not repeat back to back. 
-6. App continuously pings API for updates. 
+6. App should continuously pings API for updates. 
