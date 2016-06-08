@@ -4,7 +4,7 @@ This is a prototype of an engagement platform system with the following componen
 * Openframeworks App that serves as the front end user experience
 * Single page MEAN Stack  application that serves as the admin interface to add questions, tokens, and change their associated relationships
 
-A [demo video](https://www.youtube.com/) can be viewed here. 
+Here is a [demo video](https://youtu.be/qvVgo2Sz5Z4) and a [setup video](https://youtu.be/N1ly8BVIuso) for the database/local server.
 
 ##User Admin Setup
 
@@ -13,7 +13,7 @@ A [demo video](https://www.youtube.com/) can be viewed here.
 3. Launch [http://localhost:3000/](http://localhost:3000/) to view the admin application. ![](images/admin_launch.png)
 4. Open a new terminal window and CD into the mongo/bin folder. Run the mongo shell by typing ```mongo```.
 5. Create a database called questionlist by typing ```use questionlist``` and you should receive the following feedback -- ```switched to db questionlist```. Below is in image of the terminal commands for setting up your database. ![](images/mongodb_launch.png)
-6. Insert dummy data into the database by typing ```
+6. Insert dummy data into the database by typing <br> ```
 db.questionlist.insert([
 {question: "Should we build more schools?", Tokens: {Token1: {name: "Income Tax", yes: "5", no: "-3"}, Token2: {name: "Education Level", yes: "3", no: "-4"}, Token3: {name: "Public Health", yes: "2", no: "-5"}, Token4: {name: "Entrepreneurship", yes: "3", no: "-1"}, Token5: {name: "Community Arts", yes: "-3", no: "4"}}}, {Tokens: {
 Token1: {name: "Income Tax", yes: "6", no: "0"},Token2: {name: "Education Level",yes: "-2",no: "2"},Token3: {name: "Public Health",yes: "-3",no: "4"}, Token4:{name: "Entrepreneurship",yes: "4",no: "-3"},Token5: {name: "Community Arts",yes: "3",no: "-2"}},
@@ -56,3 +56,4 @@ Once the database is populated and the server is running, run the openFrameworks
 2. Updates to the user interface styling.
 3. Animations for leaderboard changes.
 4. Add a launch page before going straight to the leaderboard. 
+5. Make sure a question does not repeat back to back. 
