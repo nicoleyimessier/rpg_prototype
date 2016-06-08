@@ -57,3 +57,4 @@ Once the database is populated and the server is running, run the openFrameworks
 3. Animations for leaderboard changes.
 4. Add a launch page before going straight to the leaderboard. 
 5. Make sure a question does not repeat back to back. 
+6. App continuously pings API for updates. 
